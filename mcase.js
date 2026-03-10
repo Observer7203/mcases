@@ -87,26 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//others block slider
-if ($(window).width() < 992) {
-  $('.mcase__others--items').slick({
-    dots: false,
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-            }
-        },
-
-    ],
-  });
-}
+//others block — responsive handled by CSS (flex-wrap + media queries)
 
 //playing videos
 $('.mcase__video').on('click', function () {
@@ -133,4 +114,3 @@ $('.mcase__video').on('click', function () {
     currentVideo.currentTime = 0;
     currentVideo.play();
 });
-
