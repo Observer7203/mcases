@@ -503,6 +503,7 @@ body {
     height: 100%;
     border-radius: 32px;
     display: block;
+    object-fit: cover;
 }
 
 .mcase__image-wrap {
@@ -1097,6 +1098,10 @@ body {
     font-style: normal;
     font-weight: 750;
     line-height: normal;
+}
+
+.mcase3__block1--item strong {
+    color: white;
 }
 
 .mcase3__block1--item p {
@@ -3411,19 +3416,19 @@ body {
 
 .mcase8__block5--right > div:nth-of-type(2) .mcase8__block5--bot2 .mcase8__block5--color {
     background: #F5610A;
-    width: calc(24% - 20px);
+    width: calc((100% - 96px) * 0.24);
 }
 .mcase8__block5--right > div:nth-of-type(3) .mcase8__block5--bot2 .mcase8__block5--color {
     background: #12B347;
-    width: calc(37% - 20px);
+    width: calc((100% - 96px) * 0.37);
 }
 .mcase8__block5--right > div:nth-of-type(4) .mcase8__block5--bot2 .mcase8__block5--color {
     background: #167EE6;
-    width: calc(41% - 20px);
+    width: calc((100% - 96px) * 0.41);
 }
 .mcase8__block5--right > div:nth-of-type(5) .mcase8__block5--bot2 .mcase8__block5--color {
     background: #8314BB;
-    width: calc(79% - 20px);
+    width: calc((100% - 96px) * 0.79);
 }
 
 .mcase8__block5--bot {
@@ -5202,6 +5207,18 @@ body {
 }
 
 @media(max-width: 992px) {
+    .mcase__others--items {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 20px;
+    }
+    .mcase__others--item {
+        width: calc(50% - 10px);
+        height: 280px;
+    }
+    .mcase__others--item:nth-child(3) {
+        display: none;
+    }
     .mcase8__circle71 {
         width: 1200px;
         right: -15%;
@@ -6062,6 +6079,14 @@ body {
 }
 
 @media(max-width: 576px) {
+    .mcase__others--item {
+        width: 100%;
+        height: 250px;
+    }
+    .mcase__others--item:nth-child(2),
+    .mcase__others--item:nth-child(3) {
+        display: none;
+    }
     .mcase3__left2 .mcase__aboutpp--title {
         margin-bottom: 24px;
         font-size: 40px;
@@ -7181,5 +7206,11 @@ body {
     }
     .mcase6__block4--items:last-child .mcase6__block4--item .b {
         white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .mcase2__block1--bg img {
+        object-position: 14%;
     }
 }
